@@ -6,6 +6,11 @@ import Character from './components/characters';
 function App() {
   const [characters, setCharacters] = useState(null);
   const getCharacters = async () => {
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
     const apiCharacters = await fetch('https://thesimpsonsquoteapi.glitch.me/quotes?count=50');
     const jsonCharacters = await apiCharacters.json();
     
